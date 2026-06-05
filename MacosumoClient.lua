@@ -67,5 +67,5 @@ RunService.RenderStepped:Connect(function()
 end)
 
 local Sid = Instance.new("Frame", Main); Sid.Size = UDim2.new(0, 130, 1, -40); Sid.Position = UDim2.new(0, 0, 0, 40); Sid.BackgroundTransparency = 1
-for _, name in pairs({"COMBAT ⚔️", "Visusals", "Settings"}) do local b = Instance.new("TextButton", Sid); b.Size = UDim2.new(1,0,0,50); b.Text = name; b.BackgroundColor3 = Color3.fromRGB(40,40,40); b.TextColor3 = Color3.new(1,1,1); b.Position = UDim2.new(0,0,0,(name=="COMBAT ⚔️" and 0 or (name=="Görseller" and 50 or 100))); b.MouseButton1Click:Connect(function() for n, p in pairs(Pages) do p.Visible = (n == name) end end) end
+for _, name in pairs({"COMBAT ⚔️", "Visusals", "Settings"}) do local b = Instance.new("TextButton", Sid); b.Size = UDim2.new(1,0,0,50); b.Text = name; b.BackgroundColor3 = Color3.fromRGB(40,40,40); b.TextColor3 = Color3.new(1,1,1); b.Position = UDim2.new(0,0,0,(name=="COMBAT ⚔️" and 0 or (name=="Visusals" and 50 or 100))); b.MouseButton1Click:Connect(function() for n, p in pairs(Pages) do p.Visible = (n == name) end end) end
 UIS.InputBegan:Connect(function(i) if i.KeyCode == Enum.KeyCode.RightShift then Main.Visible = not Main.Visible end end)
